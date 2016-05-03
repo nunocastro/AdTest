@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.ncastro.adtest"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Suport library
+    compile "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    compile "com.android.support:recyclerview-v7:${supportLibraryVersion}"
+    compile "com.android.support:cardview-v7:${supportLibraryVersion}"
+    compile "com.android.support:design:${supportLibraryVersion}"
+
+    // Google play services
+    compile "com.google.android.gms:play-services-base:${playServicesVersion}"
+    compile "com.google.android.gms:play-services-ads:${playServicesVersion}"
+
+    // Apache commons codec
+    compile 'commons-codec:commons-codec:1.10'
+
+    // Retrofit & OkHttp
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+
+    // Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // Fyber
+    compile 'com.fyber:fyber-sdk:8.3.0'
+
+    // Tests
+    testCompile 'junit:junit:4.12'
+
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+//    androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
+//    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2'
+
+    androidTestCompile "com.android.support:support-annotations:${supportLibraryVersion}"
+//    androidTestCompile "com.android.support:appcompat-v7:${supportLibraryVersion}"
+//    androidTestCompile "com.android.support:recyclerview-v7:${supportLibraryVersion}"
+//    androidTestCompile "com.android.support:design:${supportLibraryVersion}"
+
+}

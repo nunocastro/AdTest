@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Adtest</string>
+
+    <string name="get_info_button">Retrieve Info</string>
+    <string name="hint_custom_params">Custom parameters</string>
+    <string name="hint_appid">Application id</string>
+    <string name="hint_apikey">API key</string>
+    <string name="hint_userid">User id</string>
+    <string name="payout_string">Payout</string>
+    <string name="no_offers_text">No offers are currently available</string>
+    <string name="reponse_hash_error">The hash of the response does not match!</string>
+</resources>
